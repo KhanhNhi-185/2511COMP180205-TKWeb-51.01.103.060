@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ cá vui nhộn</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <div id="content">
+        <div id="shark"><img src="image\sharkgif.gif" width="900px" height="auto"></div>
+        <div id="turtle"><img src="image\turtle-swim.gif" width="200px" height="auto"></div>
+        <div id="fish"><img src="image\fish.gif" width="400px" height="auto"></div>
+        <div id="diver1"><img src="image\diver1.png" width="auto" height="auto"></div>
+        <div id="diver2"><img src="image\diver2.png" width="auto" height="auto"></div>
+        <div id="diver3"><img src="image\diver3.png" width="auto" height="auto"></div>
+        <div id="bubble"><img src="image\bubble4.gif" width="1400px" height="auto"></div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+        <button class="phatnhac" type="button" id="music" onclick="aud_play_pause()">
+            <img width="40px" height="auto" src="image/play.png" alt="Play">
+        </button>
+
+        <audio id="myAudio" src="audio/nhac1.mp3" loop></audio>
+        <script type="text/javascript">
+            function aud_play_pause() {
+                var myAudio = document.getElementById("myAudio");
+                var musicButton = document.getElementById('music');
+                var playIcon = '<img width="40px" height="auto" src="image/play.png" alt="Play">';
+                var pauseIcon = '<img width="40px" height="auto" src="image/stop.png" alt="Pause">';
+
+                if (myAudio.paused) {
+                    myAudio.play();
+                    musicButton.innerHTML = pauseIcon;  
+                } else {
+                    myAudio.pause();
+                    musicButton.innerHTML = playIcon; 
+                }
+            }
+        </script>
+    </div>    
+</body>
+</html>

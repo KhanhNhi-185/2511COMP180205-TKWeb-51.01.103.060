@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CV-Lê Nguyễn Khánh Nhi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --left-w: 40%;
+      --card-radius: 10px;
+      --green: #aceab0;   
+      --green-under: #3ea232;
+      --pink: #ffacda; 
+      --bg: #f4fff5;     
+      --text: #0e4c20;
+      --muted: #414b45;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 30px;
+      font-family: "Roboto", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .cv {
+      max-width: 900px;
+      margin: auto;
+      display: flex;
+      flex-direction: row; /* Cột trái và phải */
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+      background: white;
+      border: solid 30px rgb(255, 107, 176);
+    }
+    .left {
+      width: var(--left-w);
+      min-width: 260px;
+      background: linear-gradient(180deg, var(--pink) 20%, var(--green) 90%);
+      color: #ffffff;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+      text-align: center;
+    }
+    .avatar {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+    }
+    .image img {
+      width: 125px;
+      object-fit: cover;
+      display: block;
+      border-radius: 50%;
+    }
+    .title h3 {
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      font-size: 20px;
+    }
+    .title p {
+      margin: 2px 0 0;
+      font-size: 13px;
+      color: #ce1785;
+    }
+    .sectitle {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      color: #e04794;
+    }
+    .about p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #ffffff;
+    }
+    .contact .item {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .contact .item small {
+      display: block;
+      color: #fff5fa;
+      font-size: 13px;
+    }
+    .skill {
+      margin: 10px 0 14px;
+    }
+    .skill .name {
+      font-size: 13px;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+    .bar {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .bar > i {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #7cc08b, #e1ffe6);
+      border-radius: 10px;
+      transition: width 1s ease;
+    }
+    .refs .ref {
+      font-size: 13px;
+      margin-bottom: 12px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.4);
+      padding-top: 8px;
+    }
+    .right {
+      width: calc(100% - var(--left-w));
+      padding: 24px 28px;
+      background: #fff;
+      display: flex;
+      flex-direction: column; /* Cột dọc */
+    }
+    .namerow {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 10px;
+    }
+    .namerow .name {
+      font-family: "Montserrat", sans-serif;
+      font-size: 34px;
+      color: var(--green);
+      letter-spacing: 1px;
+    }
+    .namerow .title {
+      font-size: 13px;
+      text-transform: uppercase;
+      color: var(--pink);
+      font-weight: 600;
+    }
+    .section {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid var(--green-under);
+    }
+    .section h4 {
+      margin: 0 0 10px 0;
+      color: var(--pink);
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+    }
+    .timeline {
+      margin-bottom: 12px;
+    }
+    .timeline .time {
+      font-weight: bold;
+      color: var(--green);
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+    .timeline p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.45;
+    }
+    @media (max-width:900px) {
+      .cv { flex-direction: column; }
+      .left, .right { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cv">
+    <aside class="left">
+      <div class="avatar">
+        <div class="image">
+          <img src="cv.jpg">
+        </div>
+        <div class="title">
+          <h3>Lê Nguyễn Khánh Nhi</h3>
+          <p align="center">Sinh viên </p>
+        </div>
+      </div>
+      <div class="about">
+        <div class="sectitle">ABOUT ME</div>
+        <p>Sinh viên ngành Sư phạm Tin học tại Trường Đại học Sư phạm Thành phố Hồ Chí Minh. Yêu thích công nghệ và giảng dạy, luôn nỗ lực học hỏi để ứng dụng kiến thức Tin học vào việc dạy học sáng tạo và hiệu quả.</p>
+      </div>
+      <div class="contact">
+        <div class="sectitle">CONTACT US:</div>
+        <div class="item"><strong>Địa chỉ:</strong><small>Hồng Bàng, Phường 1, Quận 11, Thành phố Hồ Chí Minh</small></div>
+        <div class="item"><strong>Number Phone:</strong><small>0333512892</small></div>
+        <div class="item"><strong>Email:</strong><small>lenguyenkhanhnhl2434@gmail.com</small></div>
+      </div>
+      <div class="skills">
+        <div class="sectitle">SKILLS</div>
+        <div class="skill"><div class="name">Traditional drawing</div><div class="bar"><i data-value="70%"></i></div></div>
+        <div class="skill"><div class="name">Digital painting</div><div class="bar"><i data-value="80%"></i></div></div>
+        <div class="skill"><div class="name">Vietnamese</div><div class="bar"><i data-value="90%"></i></div></div>
+        <div class="skill"><div class="name">English</div><div class="bar"><i data-value="45%"></i></div></div>
+      </div>
+      <div class="refs">
+        <div class="sectitle">Reference person</div>
+        <div class="ref"><strong>MSc. Võ Lê Phúc Hậu</strong><br>Contact: 0123 456 789</div>
+      </div>
+    </aside>
+    <section class="right">
+      <div class="namerow">
+        <h1 class="name">LÊ NGUYỄN KHÁNH NHI</h1>
+        <div class="title">Sinh viên Trường Đại học Sư phạm Thành phố Hồ Chí Minh</div>
+      </div>
+      <div class="section">
+        <h4>EDUCATION</h4>
+        <div class="timeline">
+          <div class="time">2013 - 2018</div>
+          <p><strong>Trường Tiểu học Đăk Yă</strong></p>
+        </div>
+        <div class="timeline">
+          <div class="time">2018 - 2022</div>
+          <p><strong>Trường Trung học Cơ sở Quang Trung</strong></p>
+        </div>
+        <div class="timeline">
+          <div class="time">2022 - 2025</div>
+          <p><strong>Trường Trung học Phổ thông Trần Hưng Đạo</strong></p>
+        </div>
+        <div class="timeline">
+          <div class="time">2025 - Nay</div>
+          <p><strong>Trường Đại học Sư phạm Thành phố Hồ Chí Minh</strong><br> - Ngành Sư phạm Tin học</p>
+        </div>
+      </div>
+      <div class="section">
+        <h4>ACHIEVEMENT</h4>
+        <div class="timeline">
+          <div class="time">2017 - 2018</div>
+          <p>Giải nhất cuộc thi thiết kế logo trường THCS Quang Trung</p>
+        </div>
+        <div class="timeline">
+          <div class="time">2018 - 2019</div>
+          <p>Học sinh giỏi cấp tỉnh môn Tin học, đạt giải ba</p>
+          <p>Học sinh xuất sắc</p>
+        </div>
+        <div class="timeline">
+          <div class="time">2019 - 2020</div>
+          <p>Học sinh xuất sắc học tập</p>
+        </div>
+        <div class="timeline">
+          <div class="time">2025 - 2025</div>
+          <p>Học sinh xuất sắc toàn diện</p>
+        </div>
+        <div class="timeline">
+          <div class="time">2025</div>
+          <p>Tham gia chương trình "Chắp cánh ước mơ", tổ chức vẽ minh họa cho các hoạt động cộng đồng</p>
+          <p>Giải nhì cuộc thi viết thư pháp trường THPT Trần Hưng Đạo</p>
+        </div>
+      </div>
+      <div class="section">
+        <h4>EXPERIENCE</h4>
+        <div class="timeline">
+          <div class="time">2025 - Nay</div>
+          <p>Giảng viên trợ giảng cho các lớp Tin học, phụ trách các môn học về phần mềm văn phòng và lập trình cơ bản tại các trung tâm: HP, Tâm Đức, Uranus.</p>
+        </div>
+      </div>
+      <div class="section">
+        <h4>CERTIFICATIONS</h4>
+        <div class="timeline">
+          <div class="time">2025</div>
+          <p>1000 TOEIC - Test of English for International Communication</p>
+          <p>Certified Digital Design Expert – International Design Institute, 2024 </p>
+          <p>Certified Educator in Modern Learning Technologies – EdTech Global Network, 2024</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".bar > i").forEach((bar, i) => {
+        const val = bar.dataset.value || "0%";
+        setTimeout(() => bar.style.width = val, 150 * i);
+      });
+    });
+  </script>
+
+</body>
+</html>
